@@ -1,113 +1,106 @@
-import Image from "next/image";
+'use client'
+
+import React from "react";
+import Image from 'next/image'
+import localFont from 'next/font/local'
+
+import headshot from "../../public/assets/headshot.png"
+import chicago from "../../public/assets/chicago.jpg"
+import UIUC from "../../public/assets/UIUC.jpg"
+import quad from "../../public/assets/quad.jpg"
+
+const Marine = localFont({ src: '../../public/fonts/Marine.otf' });
+const WalsheimBold = localFont({ src: '../../public/fonts/WalsheimB.otf' });
+const WalsheimUltraBold = localFont({ src: '../../public/fonts/WalsheimUB.otf' });
+
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="flex flex-col items-center gap-[15px] mt-[15px] bg-background">
+
+      {/* Colorscheme Changer */}
+      {/* <div className="w-[55px] h-[180px] fixed right-0 top-0 flex flex-col justify-evenly">
+        <div className="cursor-pointer w-[40px] h-[40px] border-2 border-textcolor rounded-[15px] bg-accent hover:scale-[1.15] hover:shadow-lg duration-200"></div>
+        <div className="cursor-pointer w-[40px] h-[40px] border-2 border-textcolor rounded-[15px] bg-accent hover:scale-[1.15] hover:shadow-lg duration-200"></div>
+        <div className="cursor-pointer w-[40px] h-[40px] border-2 border-textcolor rounded-[15px] bg-accent hover:scale-[1.15] hover:shadow-lg duration-200"></div>
+      </div> */}
+
+      {/* Header */}
+      <div className="border-textcolor w-[800px] h-[50px] bg-accent border-2 rounded-[50px] flex flex-row items-center justify-center justify-evenly">
+        <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[2deg] duration-200 cursor-pointer`}><a href="https://github.com/jrkoonce-invis?tab=repositories" target="_blank">Github</a></p>
+        <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[-2deg] duration-200 cursor-pointer`}><a href="https://www.linkedin.com/in/jameson-koonce-543292267/" target="_blank">Linkedin</a></p>
+        <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[1deg] duration-200 cursor-pointer`}>Contact</p>
+      </div>
+
+      <div className="flex flex-row gap-[15px]">
+
+        {/* Photos */}
+        <div className="w-[185px] h-[820px] flex flex-col gap-[15px]">
+
+          <div className="flex flex-col items-center justify-evenly w-[185px] h-[400px] border-textcolor border-2 rounded-[50px] bg-secondary">
+
+            <Image className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={headshot} alt="headshot" width={155} height={155}></Image>
+            <Image className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={chicago} alt="headshot" width={155} height={170}></Image>
+
+          </div>
+          <div className="flex flex-col items-center justify-evenly w-[185px] h-[215px] border-textcolor border-2 rounded-[50px] bg-primary">
+
+            <Image className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={UIUC} alt="headshot" width={155} height={170}></Image>
+
+          </div>
+          <div className="flex flex-col items-center justify-evenly w-[185px] h-[170px] border-textcolor border-2 rounded-[50px] bg-accent">
+            
+            <Image className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={quad} alt="headshot" width={155} height={155}></Image>
+          </div>
         </div>
+
+        {/* Main Content */}
+        <div className="flex flex-col items-center gap-[15px]">
+
+          {/* Jameson Koonce Area */}
+          <div className={`border-textcolor w-[600px] h-[400px] bg-primary border-2 border-text rounded-[50px] flex flex-col gap-[10px] justify-center`}>
+            <div className="w-[520px] ml-auto mr-auto mb-[20px]">
+              <p className={`${Marine.className} text-textcolor text-6xl`}>Hey, I'm</p>
+              <p className={`${Marine.className} text-textcolor text-6xl`}>Jameson Koonce</p>
+            </div>
+            <div className="w-[520px] ml-auto mr-auto">
+              <p className={`${WalsheimBold.className} text-textcolor text-xl`}>I'm a computer engineering major at the University</p>
+              <p className={`${WalsheimBold.className} text-textcolor text-xl`}>of Illinois. I love Software Engineering, Design, and</p>
+              <p className={`${WalsheimBold.className} text-textcolor text-xl`}>Entrepreneurship! See some of my past and present</p>
+              <p className={`${WalsheimBold.className} text-textcolor text-xl`}>work below, and on my GitHub above!</p>
+            </div>
+          </div>
+
+          {/* Buttons */}
+          <div className="border-textcolor w-[600px] h-[215px] grid grid-rows-2 grid-cols-1 gap-[15px]">
+            <a href="https://www.linkedin.com/in/jameson-koonce-543292267/" target="_blank" className="grid border-textcolor cursor-pointer duration-200 hover:shadow-lg hover:border-[3] hover:rotate-1 hover:scale-[1.04] col-span-2 w-[600px] h-[100px] bg-secondary border-2 border-text rounded-tl-[50px] rounded-tr-[50px] rounded-bl-[10px] rounded-br-[10px]">
+              <p className={`${Marine.className} text-textcolor text-4xl m-auto pt-[5px]`}>Experience</p>
+            </a>
+            <div className="flex flex-row gap-[15px] w-[600px]">
+              <a href="/projects" className="grid text-3xl border-textcolor cursor-pointer duration-200 hover:shadow-lg hover:border-[3] hover:rotate-[-2deg] hover:scale-[1.05] w-[385px] h-[100px] bg-accent border-2 border-text rounded-tl-[10px] rounded-bl-[50px] rounded-br-[10px]">
+                <p className={`${Marine.className} text-textcolor text-4xl m-auto pt-[5px]`}>Projects</p>
+              </a>
+              <a href="/ideas" className="grid text-3xl border-textcolor cursor-pointer duration-200 hover:shadow-lg hover:border-[3] hover:rotate-2 hover:scale-[1.05] w-[200px] h-[100px] bg-primary border-2 border-text rounded-tl-[100px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[50px]">
+                <p className={`${Marine.className} text-textcolor text-4xl m-auto pt-[5px]`}>Ideas</p>
+              </a>
+            </div>
+          </div>
+
+          {/* Lower Section */}
+          <div className="flex flex-row gap-[15px] mb-[15px]">
+            <div className="grid border-textcolor w-[350px] h-[170px] bg-primary border-2 border-text rounded-[50px]">
+              <p className={`${WalsheimBold.className} text-textcolor text-xl w-[250px] m-auto`}>I also like to try new things! Take a look at some of my highlights!</p>
+            </div>
+            <a href="highlights" className="cursor-pointer grid border-textcolor w-[235px] h-[170px] bg-secondary border-2 border-text rounded-[50px] hover:shadow-lg hover:border-[3] hover:rotate-[-2deg] hover:scale-[1.05] duration-200">
+              <p className={`${Marine.className} text-textcolor text-4xl m-auto`}>Highlights</p>
+            </a>
+          </div>
+
+        </div>
+
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
