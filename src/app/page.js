@@ -4,6 +4,8 @@ import React from "react";
 import Image from 'next/image'
 import localFont from 'next/font/local'
 
+import { motion, useScroll } from "framer-motion"
+
 import headshot from "../../public/assets/headshot.png"
 import chicago from "../../public/assets/chicago.jpg"
 import UIUC from "../../public/assets/UIUC.jpg"
@@ -18,6 +20,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center gap-[15px] mt-[15px] bg-background">
+
+      {/* App Icon */}
+      <link rel="icon" href="/favicon.ico" sizes="any" />
 
       {/* Colorscheme Changer */}
       {/* <div className="w-[55px] h-[180px] fixed right-0 top-0 flex flex-col justify-evenly">
@@ -59,7 +64,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-[15px]">
 
           {/* Jameson Koonce Area */}
-          <div className={`border-textcolor w-[600px] h-[400px] bg-primary border-2 border-text rounded-[50px] flex flex-col gap-[10px] justify-center`}>
+          <div className={`animate-[popin_.2s_.2s_ease-in-out] border-textcolor w-[600px] h-[400px] bg-primary border-2 border-text rounded-[50px] flex flex-col gap-[10px] justify-center`}>
             <div className="w-[520px] ml-auto mr-auto mb-[20px]">
               <p className={`${Marine.className} text-textcolor text-6xl`}>Hey, I'm</p>
               <p className={`${Marine.className} text-textcolor text-6xl`}>Jameson Koonce</p>
@@ -74,14 +79,14 @@ export default function Home() {
 
           {/* Buttons */}
           <div className="border-textcolor w-[600px] h-[215px] grid grid-rows-2 grid-cols-1 gap-[15px]">
-            <a href="https://www.linkedin.com/in/jameson-koonce-543292267/" target="_blank" className="grid border-textcolor cursor-pointer duration-200 hover:shadow-lg hover:border-[3] hover:rotate-1 hover:scale-[1.04] col-span-2 w-[600px] h-[100px] bg-secondary border-2 border-text rounded-tl-[50px] rounded-tr-[50px] rounded-bl-[10px] rounded-br-[10px]">
+            <a href="https://www.linkedin.com/in/jameson-koonce-543292267/" target="_blank" className="animate-[popin_.2s_.3s_ease-in-out] grid border-textcolor cursor-pointer duration-200 hover:shadow-lg hover:border-[3] hover:rotate-1 hover:scale-[1.04] col-span-2 w-[600px] h-[100px] bg-secondary border-2 border-text rounded-tl-[50px] rounded-tr-[50px] rounded-bl-[10px] rounded-br-[10px]">
               <p className={`${Marine.className} text-textcolor text-4xl m-auto pt-[5px]`}>Experience</p>
             </a>
             <div className="flex flex-row gap-[15px] w-[600px]">
-              <a href="/projects" className="grid text-3xl border-textcolor cursor-pointer duration-200 hover:shadow-lg hover:border-[3] hover:rotate-[-2deg] hover:scale-[1.05] w-[385px] h-[100px] bg-accent border-2 border-text rounded-tl-[10px] rounded-bl-[50px] rounded-br-[10px]">
+              <a href="/projects" className="animate-[popin_.2s_.3s_ease-in-out] grid text-3xl border-textcolor cursor-pointer duration-200 hover:shadow-lg hover:border-[3] hover:rotate-[-2deg] hover:scale-[1.05] w-[385px] h-[100px] bg-accent border-2 border-text rounded-tl-[10px] rounded-bl-[50px] rounded-br-[10px]">
                 <p className={`${Marine.className} text-textcolor text-4xl m-auto pt-[5px]`}>Projects</p>
               </a>
-              <a href="/ideas" className="grid text-3xl border-textcolor cursor-pointer duration-200 hover:shadow-lg hover:border-[3] hover:rotate-2 hover:scale-[1.05] w-[200px] h-[100px] bg-primary border-2 border-text rounded-tl-[100px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[50px]">
+              <a href="/ideas" className="animate-[popin_.2s_.4s_ease-in-out] grid text-3xl border-textcolor cursor-pointer duration-200 hover:shadow-lg hover:border-[3] hover:rotate-2 hover:scale-[1.05] w-[200px] h-[100px] bg-primary border-2 border-text rounded-tl-[100px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[50px]">
                 <p className={`${Marine.className} text-textcolor text-4xl m-auto pt-[5px]`}>Ideas</p>
               </a>
             </div>
@@ -89,10 +94,10 @@ export default function Home() {
 
           {/* Lower Section */}
           <div className="flex flex-row gap-[15px] mb-[15px]">
-            <div className="grid border-textcolor w-[350px] h-[170px] bg-primary border-2 border-text rounded-[50px]">
+            <div className="animate-[popin_.2s_.4s_ease-in-out] grid border-textcolor w-[350px] h-[170px] bg-primary border-2 border-text rounded-[50px]">
               <p className={`${WalsheimBold.className} text-textcolor text-xl w-[250px] m-auto`}>I also like to try new things! Take a look at some of my highlights!</p>
             </div>
-            <a href="highlights" className="cursor-pointer grid border-textcolor w-[235px] h-[170px] bg-secondary border-2 border-text rounded-[50px] hover:shadow-lg hover:border-[3] hover:rotate-[-2deg] hover:scale-[1.05] duration-200">
+            <a href="highlights" className="animate-[popin_.2s_.5s_ease-in-out] cursor-pointer grid border-textcolor w-[235px] h-[170px] bg-secondary border-2 border-text rounded-[50px] hover:shadow-lg hover:border-[3] hover:rotate-[-2deg] hover:scale-[1.05] duration-200">
               <p className={`${Marine.className} text-textcolor text-4xl m-auto`}>Highlights</p>
             </a>
           </div>

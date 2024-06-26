@@ -16,7 +16,13 @@ module.exports = {
       "textcolor": "#122007",
     },
     extend: {
-
+      keyframes: {
+        popin: {
+        }
+      },
+      animation: {
+        'loadin': 'popin .2s ease-in-out'
+      }
     },
   },
   plugins: [],
