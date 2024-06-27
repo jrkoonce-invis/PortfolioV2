@@ -26,6 +26,11 @@ export default function Home() {
 
   const cardElements = [];
   const latestIdeas = [];
+  let cardDisplacement = 400
+
+  if (window.innerWidth <= 640) {
+    cardDisplacement = 200;
+  }
 
   ideas.forEach((idea, i) => {
     if (i == 0) {
@@ -37,7 +42,7 @@ export default function Home() {
         <motion.div 
             key={i}
             className="w-fit"
-            initial={{x: i % 2 == 0 ? 400 : -400}}
+            initial={{x: i % 2 == 0 ? cardDisplacement : -cardDisplacement}}
             whileInView={{x: 0,
                           transition: {
                             type: "spring",
@@ -57,13 +62,13 @@ export default function Home() {
     <div className="flex flex-col items-center gap-[15px] mt-[15px] mb-[15px] bg-background">
 
         {/* Header */}
-        <div className="border-textcolor w-[800px] h-[50px] border-2 rounded-[50px] flex flex-row items-center justify-center justify-evenly">
+        <div className="border-textcolor max-w-[600px] w-[80vw] min-w-[320px] h-[50px] border-2 rounded-[50px] flex flex-row items-center justify-center justify-evenly">
             <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[1deg] duration-200 cursor-pointer`}><a href="/">Home</a></p>
             <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[2deg] duration-200 cursor-pointer`}><a href="https://github.com/jrkoonce-invis?tab=repositories" target="_blank">Github</a></p>
             <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[-2deg] duration-200 cursor-pointer`}><a href="https://www.linkedin.com/in/jameson-koonce-543292267/" target="_blank">Linkedin</a></p>
         </div>
 
-        <p className={`${Marine.className} w-[800px] text-6xl text-center mt-[20px]`}>Ideas</p>
+        <p className={`${Marine.className} max-w-[600px] w-[80vw] min-w-[320px] text-6xl text-center mt-[20px]`}>Ideas</p>
 
         {/* Projects Below */}
         {latestIdeas}

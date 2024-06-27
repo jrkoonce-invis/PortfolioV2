@@ -26,23 +26,23 @@ export default function Home() {
     <div className="flex flex-col items-center gap-[15px] mt-[15px] mb-[15px] bg-background">
 
         {/* Header */}
-        <div className="border-textcolor w-[600px] h-[50px] bg-accent border-2 rounded-[50px] flex flex-row items-center justify-center justify-evenly">
+        <div className="border-textcolor max-w-[600px] w-[80vw] min-w-[320px] h-[50px] bg-accent border-2 rounded-[50px] flex flex-row items-center justify-center justify-evenly">
             <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[1deg] duration-200 cursor-pointer`}><a href="/projects">Back</a></p>
             <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[2deg] duration-200 cursor-pointer`}><a href="https://github.com/jrkoonce-invis?tab=repositories" target="_blank">Github</a></p>
             <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[-2deg] duration-200 cursor-pointer`}><a href="/projects/graffiti">Next</a></p>
         </div>
 
-        <p className={`${Marine.className} text-textcolor w-[600px] text-6xl text-center mt-[20px]`}>Flyr Platform</p>
+        <p className={`${Marine.className} text-textcolor max-w-[600px] w-[80vw] min-w-[320px] text-6xl text-center mt-[20px]`}>Flyr Platform</p>
 
         {/* Project Content */}
-        <div className={`${WalsheimThin.className} text-textcolor text-md w-[800px]`}>
+        <div className={`${WalsheimThin.className} text-textcolor text-md max-w-[800px] w-[80vw] min-w-[320px]`}>
             <div>Project Github can be <a href="https://github.com/jrkoonce-invis/FLYR" className="underline" target="_blank">found here</a></div>
 
             <ProjectHeading text="What is Flyr?" />
             Flyr is a student run startup at the University of Illinois that is more effectivly connecting students with opportunities on campus! We are a team of 4 that started at <a href="https://www.foundersillinois.org/54" target="_blank">Founders' 54</a> event in the Seibel Center for Design. Since then, we have been deadset on launching our Flyr Platform project during the Spring '24 semester.
-            <div class="flex justify-center gap-4">
-            <Image src={flyr_logo} alt="Image Unavailable" width={200} height={200}></Image>
-            <Image src={flyr_logo2} alt="Image Unavailable" width={200} height={200}></Image>
+            <div class="flex mt-[10px] sm:flex-row flex-col justify-center gap-4 max-w-[800px] w-[80vw] min-w-[320px] items-center align-center">
+                <Image src={flyr_logo} alt="Image Unavailable" width={200} height={200}></Image>
+                <Image src={flyr_logo2} alt="Image Unavailable" width={200} height={200}></Image>
             </div>
 
             <ProjectHeading text="What is the Flyr Platform?" />

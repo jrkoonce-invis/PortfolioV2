@@ -23,16 +23,16 @@ export default function Home() {
     <div className="flex flex-col items-center gap-[15px] mt-[15px] mb-[15px] bg-background">
 
         {/* Header */}
-        <div className="border-textcolor w-[600px] h-[50px] bg-accent border-2 rounded-[50px] flex flex-row items-center justify-center justify-evenly">
+        <div className="border-textcolor max-w-[600px] w-[80vw] min-w-[320px] h-[50px] bg-accent border-2 rounded-[50px] flex flex-row items-center justify-center justify-evenly">
             <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[1deg] duration-200 cursor-pointer`}><a href="/projects">Back</a></p>
             <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[2deg] duration-200 cursor-pointer`}><a href="https://github.com/jrkoonce-invis?tab=repositories" target="_blank">Github</a></p>
             <p className={`${Marine.className} text-textcolor mt-[5px] hover:scale-[1.1] hover:rotate-[-2deg] duration-200 cursor-pointer`}><a href="/projects/graffiti">Next</a></p>
         </div>
 
-        <p className={`${Marine.className} text-textcolor w-[600px] text-6xl text-center mt-[20px]`}>Ninja Frog Python Platformer</p>
+        <p className={`${Marine.className} text-textcolor max-w-[600px] w-[80vw] min-w-[320px] text-6xl text-center mt-[20px]`}>Ninja Frog Python Platformer</p>
 
         {/* Project Content */}
-        <div className={`${WalsheimThin.className} text-textcolor text-md w-[800px]`}>
+        <div className={`${WalsheimThin.className} text-textcolor text-md max-w-[800px] w-[80vw] min-w-[320px]`}>
             <div>Project Github can be <a href="https://github.com/jrkoonce-invis/Pygame-Platformer" target="_blank" className="underline">found here</a></div>
 
             <ProjectHeading text="Project Goal" />

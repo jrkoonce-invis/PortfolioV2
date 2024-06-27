@@ -23,22 +23,16 @@ const IdeaCard = ({ width, img, color, title, desc, date }) => {
         <div className="flex flex-row gap-[15px]">   
 
             {/* Main Text */}
-            <div className={`duration-200 cursor-default hover:border-dashed border-textcolor w-[800px] h-fit pt-[40px] pb-[40px] bg-${color} border-2 border-text rounded-[50px] flex flex-col gap-[10px] justify-center`}>
+            <div className={`sm:pl-[40px] sm:pr-[40px] pl-[30px] pr-[30px] duration-200 cursor-default hover:border-dashed border-textcolor max-w-[800px] w-[80vw] min-w-[320px] h-fit pt-[40px] pb-[40px] bg-${color} border-2 border-text rounded-[50px] flex flex-col gap-[10px] justify-center`}>
                 
-                <div className={`w-[600px] ml-auto mr-auto`}>
-                    <p className={`${Marine.className} text-textcolor text-3xl`}>{title}</p>
-                </div>
+                <p className={`${Marine.className} text-textcolor text-3xl`}>{title}</p>
 
                 {img && imagePath != "" &&
                     <Image src={imagePath} alt="demo" width={width} height={400} className="ml-auto mr-auto mt-[15px] mb-[15px]"></Image>
                 }
 
-                <div className={`w-[600px] ml-auto mr-auto`}>
-                    <p className={`${WalsheimThin.className} text-textcolor text-lg`}>{desc}</p>
-                </div>
-                <div className={`w-[600px] ml-auto mr-auto`}>
-                    <p className={`${WalsheimBold.className} text-textcolor text-lg`}>{date}</p>
-                </div>
+                <p className={`${WalsheimThin.className} text-textcolor text-lg text-wrap`}>{desc}</p>
+                <p className={`${WalsheimBold.className} text-textcolor text-lg`}>{date}</p>
             </div>
         </div>
     );
