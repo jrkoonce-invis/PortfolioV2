@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ProjectCard from "@/components/ProjectCard";
 import FakeProjectCard from "@/components/FakeProjectCard";
 import localFont from 'next/font/local'
@@ -29,9 +29,11 @@ export default function Home() {
   const latestProjects = [];
   let cardDisplacement = 400
 
-  if (window.innerWidth <= 640) {
-    cardDisplacement = 200;
-  }
+  useEffect(() => {
+    if (window.innerWidth <= 640) {
+      cardDisplacement = 200;
+    }
+  })
 
   projects.forEach((project, i) => {
     if (i == 0) {

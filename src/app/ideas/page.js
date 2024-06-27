@@ -1,6 +1,6 @@
 'use client'
 
-import React from "react";
+import { React, useEffect } from "react";
 import IdeaCard from "@/components/IdeaCard";
 import localFont from 'next/font/local'
 
@@ -28,9 +28,11 @@ export default function Home() {
   const latestIdeas = [];
   let cardDisplacement = 400
 
-  if (window.innerWidth <= 640) {
-    cardDisplacement = 200;
-  }
+  useEffect(() => {
+    if (window.innerWidth <= 640) {
+      cardDisplacement = 200;
+    }
+  })
 
   ideas.forEach((idea, i) => {
     if (i == 0) {
