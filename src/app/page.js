@@ -3,6 +3,7 @@
 import React from "react";
 import Image from 'next/image'
 import localFont from 'next/font/local'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { motion, useScroll } from "framer-motion"
 
@@ -78,7 +79,7 @@ export default function Home() {
 
           {/* Buttons */}
           <div className="border-textcolor max-w-[600px] w-[80vw] min-w-[320px] h-[215px] grid grid-rows-2 grid-cols-1 gap-[15px]">
-            <a href="https://www.linkedin.com/in/jameson-koonce-543292267/" target="_blank" className="animate-[popin_.2s_.3s_ease-in-out] grid border-textcolor cursor-pointer hover:shadow-lg hover:border-[3] hover:rotate-1 hover:scale-[1.04] col-span-2 max-w-[600px] w-[80vw] min-w-[320px] h-[100px] bg-secondary border-2 border-text rounded-tl-[50px] rounded-tr-[50px] rounded-bl-[10px] rounded-br-[10px]">
+            <a href="https://www.linkedin.com/in/jameson-koonce-543292267/" target="_blank" className="animate-[popin_.2s_.3s_ease-in-out] duration-200 grid border-textcolor cursor-pointer hover:shadow-lg hover:border-[3] hover:rotate-1 hover:scale-[1.04] col-span-2 max-w-[600px] w-[80vw] min-w-[320px] h-[100px] bg-secondary border-2 border-text rounded-tl-[50px] rounded-tr-[50px] rounded-bl-[10px] rounded-br-[10px]">
               <p className={`${Marine.className} text-textcolor text-4xl m-auto pt-[5px]`}>Experience</p>
             </a>
             <div className="flex flex-row gap-[15px] max-w-[600px] w-[80vw] min-w-[320px]">
