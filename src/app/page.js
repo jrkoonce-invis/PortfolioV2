@@ -79,14 +79,14 @@ export default function Home() {
           {/* Buttons */}
           <div className="border-textcolor max-w-[600px] w-[80vw] min-w-[320px] h-[215px] grid grid-rows-2 grid-cols-1 gap-[15px]">
             <a href="https://www.linkedin.com/in/jameson-koonce-543292267/" target="_blank" className="animate-[popin_.2s_.3s_ease-in-out] duration-200 grid border-textcolor cursor-pointer hover:shadow-lg hover:border-[3] hover:rotate-1 hover:scale-[1.04] col-span-2 max-w-[600px] w-[80vw] min-w-[320px] h-[100px] bg-secondary border-2 border-text rounded-tl-[50px] rounded-tr-[50px] rounded-bl-[10px] rounded-br-[10px]">
-              <p className={`${Marine.className} text-textcolor text-4xl m-auto pt-[5px]`}>Experience</p>
+              <p className={`${Marine.className} text-textcolor sm:text-4xl text-3xl m-auto pt-[5px]`}>Experience</p>
             </a>
             <div className="flex flex-row gap-[15px] max-w-[600px] w-[80vw] min-w-[320px]">
               <a href="/projects" className="animate-[popin_.2s_.3s_ease-in-out] grid text-3xl border-textcolor cursor-pointer duration-200 hover:shadow-lg hover:border-[3] hover:rotate-[-2deg] hover:scale-[1.05] w-[60%] h-[100px] bg-accent border-2 border-text rounded-tl-[10px] rounded-bl-[50px] rounded-br-[10px]">
-                <p className={`${Marine.className} text-textcolor text-4xl m-auto pt-[5px]`}>Projects</p>
+                <p className={`${Marine.className} text-textcolor sm:text-4xl text-3xl m-auto pt-[5px]`}>Projects</p>
               </a>
               <a href="/ideas" className="animate-[popin_.2s_.4s_ease-in-out] grid text-3xl border-textcolor cursor-pointer duration-200 hover:shadow-lg hover:border-[3] hover:rotate-2 hover:scale-[1.05] md:w-[40%] w-[50%] h-[100px] bg-primary border-2 border-text rounded-tl-[100px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[50px]">
-                <p className={`${Marine.className} text-textcolor text-4xl m-auto pt-[5px]`}>Ideas</p>
+                <p className={`${Marine.className} text-textcolor sm:text-4xl text-3xl m-auto pt-[5px]`}>Ideas</p>
               </a>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function Home() {
               <p className={`${WalsheimBold.className} text-textcolor text-xl`}>I also like to try new things! Take a look at some of my highlights!</p>
             </div>
             <a href="highlights" className="animate-[popin_.2s_.5s_ease-in-out] cursor-pointer grid border-textcolor md:w-[40%] text-center w-[50%] h-[100%] bg-secondary border-2 border-text rounded-[50px] hover:shadow-lg hover:border-[3] hover:rotate-[-2deg] hover:scale-[1.05] duration-200">
-              <p className={`${Marine.className} text-textcolor text-4xl m-auto rotate-90 sm:rotate-0`}>Gallery</p>
+              <p className={`${Marine.className} text-textcolor sm:text-4xl text-3xl m-auto rotate-90 sm:rotate-0`}>Gallery</p>
             </a>
           </div>
 
