@@ -7,7 +7,6 @@ const WalsheimBold = localFont({ src: '../../public/fonts/WalsheimB.otf' });
 const WalsheimUltraBold = localFont({ src: '../../public/fonts/WalsheimUB.otf' });
 const WalsheimThin = localFont({ src: '../../public/fonts/WalsheimThin.otf' });
 
-
 const ProjectCard = ({ color, title, desc, date, image, link }) => {
     return (
         <div className="flex flex-row gap-[20px] pointer-cursor">

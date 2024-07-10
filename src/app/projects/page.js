@@ -7,7 +7,6 @@ import localFont from 'next/font/local'
 
 import { motion, useScroll, useMotionValueEvent, useTransform, Variants } from "framer-motion"
 
-
 const Marine = localFont({ src: '../../../public/fonts/Marine.otf' });
 const WalsheimBold = localFont({ src: '../../../public/fonts/WalsheimB.otf' });
 const WalsheimUltraBold = localFont({ src: '../../../public/fonts/WalsheimUB.otf' });

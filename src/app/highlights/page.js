@@ -6,10 +6,16 @@ import Image from 'next/image'
 
 import { motion, useScroll, useMotionValueEvent, useTransform, useSpring } from "framer-motion";
 
-import ProjectCard from "@/components/ProjectCard";
-import HighlightCard from "@/components/HighlightCard";
-import HighlightCard2 from "@/components/HighlightCard2";
-import HighlightCard3 from "@/components/HighlightCard3";
+import CLIMB1 from "../../../public/assets/CLIMB1.jpg"
+import CLIMB2 from "../../../public/assets/CLIMB2.jpg"
+import CLIMB3 from "../../../public/assets/CLIMB3.jpg"
+import HIKE1 from "../../../public/assets/HIKE1.jpg"
+import HIKE2 from "../../../public/assets/HIKE2.jpg"
+import HIKE3 from "../../../public/assets/HIKE3.jpg"
+import MOVIE2 from "../../../public/assets/MOVIE2.jpg"
+import MOVIE3 from "../../../public/assets/MOVIE3.jpg"
+import MOVIEHALF from "../../../public/assets/MOVIEHALF.jpg"
+import MOVIEOTHERHALF from "../../../public/assets/MOVIEOTHERHALF.jpg"
 
 
 const Marine = localFont({ src: '../../../public/fonts/Marine.otf' });
@@ -50,9 +56,9 @@ export default function Home() {
                     <p className={`${WalsheimThin.className} text-textcolor text-lg mb-[5px]`}>{"My favorite outdoor activity is rock climbing! I'm trying to climb V8 before the end of the year. I do most of my training at Urbana Boulders in Champaign but I also do a lot on my own with a Tension Board. I've only been outdoors once, but I'm looking to take a trip out to Colorodo as I improve!"}</p>
                 </motion.div>
 
-                <Image className="row-span-1 col-span-1 hover:scale-[1.05] duration-200 rounded-[50px]" src={`/assets/${"CLIMB1.JPG"}`} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
-                <Image className="row-span-1 col-span-1 hover:scale-[1.05] duration-200 rounded-[50px]" src={`/assets/${"CLIMB2.JPG"}`} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
-                <Image className="row-span-1 col-span-1 hover:scale-[1.05] duration-200 rounded-[50px]" src={`/assets/${"CLIMB3.jpg"}`} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
+                <Image placeholder="blur" className="row-span-1 col-span-1 hover:scale-[1.05] duration-200 rounded-[50px]" src={CLIMB1} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
+                <Image placeholder="blur" className="row-span-1 col-span-1 hover:scale-[1.05] duration-200 rounded-[50px]" src={CLIMB2} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
+                <Image placeholder="blur" className="row-span-1 col-span-1 hover:scale-[1.05] duration-200 rounded-[50px]" src={CLIMB3} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
 
                 <div className={`row-span-2 duration-200 w-[300px] h-[615px] hover:shadow-lg border-textcolor pt-[40px] pb-[40px] bg-${"secondary"} border-2 border-text rounded-[50px] flex flex-col gap-[10px] justify-center`}>
                     <div className="w-[300px] ml-auto mr-auto p-[40px]">
@@ -63,16 +69,16 @@ export default function Home() {
 
                 
 
-                <Image className="md:block lg:hidden hidden hover:scale-[1.05] duration-200 rounded-[50px]" src={`/assets/${"HIKE3.JPG"}`} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
+                <Image placeholder="blur" className="md:block lg:hidden hidden hover:scale-[1.05] duration-200 rounded-[50px]" src={HIKE3} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
 
                 <motion.div className={`duration-200 col-span-1 row-span-2 md:row-span-1 md:col-span-2 p-[40px] md:h-[300px] h-[615px] hover:shadow-lg border-textcolor md:w-[615px] w-[300px] pt-[40px] pb-[40px] bg-${"accent"} border-2 border-text rounded-[50px] flex flex-col gap-[10px] justify-center`}>
                     <p className={`${Marine.className} text-textcolor text-3xl`}>{"National Parks"}</p>
                     <p className={`${WalsheimThin.className} text-textcolor text-lg mb-[5px]`}>{"For the last two summers me and some friends have done a 10 day road trip out west! In our last trip we hit the Badlands, the Grand Tetons, Yellowstone, and Glaicer. I want to see all the National Parks one day. If you have any outdoor adventures, feel free to share your stories!"}</p>
                 </motion.div>
                 
-                <Image className="hover:scale-[1.05] duration-200 rounded-[50px]" src={`/assets/${"HIKE1.JPG"}`} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
-                <Image className="hover:scale-[1.05] duration-200 rounded-[50px]" src={`/assets/${"HIKE2.JPG"}`} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
-                <Image className="md:hidden lg:block block hover:scale-[1.05] duration-200 rounded-[50px]" src={`/assets/${"HIKE3.JPG"}`} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
+                <Image placeholder="blur" className="hover:scale-[1.05] duration-200 rounded-[50px]" src={HIKE1} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
+                <Image placeholder="blur" className="hover:scale-[1.05] duration-200 rounded-[50px]" src={HIKE2} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
+                <Image placeholder="blur" className="md:hidden lg:block block hover:scale-[1.05] duration-200 rounded-[50px]" src={HIKE3} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
                 
                 <motion.div className={`p-[40px] md:row-span-2 md:col-span-2 row-span-3 col-span-1 duration-200 md:w-[615px] md:h-[615px] w-[300px] h-[930px] hover:shadow-lg border-textcolor pt-[40px] pb-[40px] bg-${"primary"} border-2 border-text rounded-[50px] flex flex-col gap-[10px] justify-center`}
                     >
@@ -87,13 +93,13 @@ export default function Home() {
                             <p>- Spiderman: Into the Spiderverse</p>
                             <p>- It's a Wonderful Life</p>
                         </ul>
-                        <Image className="rounded-[10px] md:block hidden" src={`/assets/${"MOVIEHALF.jpg"}`} alt="Image Unavailable" style={{objectFit: "contain"}} width={140} height={140} />
-                        <Image className="rounded-[10px] md:block hidden" src={`/assets/${"MOVIEOTHERHALF.jpg"}`} alt="Image Unavailable" style={{objectFit: "contain"}} width={140} height={140} />
+                        <Image placeholder="blur" className="rounded-[10px] md:block hidden" src={MOVIEHALF} alt="Image Unavailable" style={{objectFit: "contain"}} width={140} height={140} />
+                        <Image placeholder="blur" className="rounded-[10px] md:block hidden" src={MOVIEOTHERHALF} alt="Image Unavailable" style={{objectFit: "contain"}} width={140} height={140} />
                     </div>
                 </motion.div>
 
-                <Image className="hover:scale-[1.05] duration-200 rounded-[50px]" src={`/assets/${"MOVIE2.JPG"}`} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
-                <Image className="hover:scale-[1.05] duration-200 rounded-[50px]" src={`/assets/${"MOVIE3.JPG"}`} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
+                <Image placeholder="blur" className="hover:scale-[1.05] duration-200 rounded-[50px]" src={MOVIE2} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
+                <Image placeholder="blur" className="hover:scale-[1.05] duration-200 rounded-[50px]" src={MOVIE3} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={300} />
 
             </motion.div>
     </motion.div>

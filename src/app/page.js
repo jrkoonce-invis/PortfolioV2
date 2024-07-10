@@ -49,14 +49,14 @@ export default function Home() {
         <div className="lg:block hidden">
           <div className="w-[185px] h-[804px] flex flex-col gap-[15px]">
             <div className="flex flex-col items-center justify-evenly w-[185px] h-[376px] border-textcolor border-2 rounded-[50px] bg-secondary">
-              <Image className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={headshot} alt="headshot" width={145} height={145}></Image>
-              <Image className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={chicago} alt="headshot" width={145} height={170}></Image>
+              <Image placeholder="blur" className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={headshot} alt="headshot" width={145} height={145}></Image>
+              <Image placeholder="blur" className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={chicago} alt="headshot" width={145} height={170}></Image>
             </div>
             <div className="flex flex-col items-center justify-evenly w-[185px] h-[215px] border-textcolor border-2 rounded-[50px] bg-primary">
-              <Image className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={UIUC} alt="headshot" width={145} height={170}></Image>
+              <Image placeholder="blur" className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={UIUC} alt="headshot" width={145} height={170}></Image>
             </div>
             <div className="flex flex-col items-center justify-evenly w-[185px] h-[168px] border-textcolor border-2 rounded-[50px] bg-accent">
-              <Image className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={quad} alt="headshot" width={145} height={145}></Image>
+              <Image placeholder="blur" className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" src={quad} alt="headshot" width={145} height={145}></Image>
             </div>
           </div>
         </div>
@@ -73,8 +73,8 @@ export default function Home() {
 
           {/* Mobile Photos */}
           <div className="sm:hidden block gap-[15px] grid grid-cols-2 max-w-[600px] w-[80vw] min-w-[320px] items-center justify-between">
-            <Image className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" style={{objectFit: "contain"}} src={headshot} alt="headshot" width={290} height={290}></Image>
-            <Image className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" style={{objectFit: "contain"}} src={chicago_mobile} alt="headshot" width={290} height={290}></Image>
+            <Image placeholder="blur" className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" style={{objectFit: "contain"}} src={headshot} alt="headshot" width={290} height={290}></Image>
+            <Image placeholder="blur" className="hover:scale-[1.05] duration-200 rounded-[50px] border-2 border-textcolor" style={{objectFit: "contain"}} src={chicago_mobile} alt="headshot" width={290} height={290}></Image>
           </div>
 
           {/* Buttons */}
