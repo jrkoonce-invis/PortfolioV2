@@ -26,7 +26,7 @@ export default function Home() {
 
   const cardElements = [];
   const latestProjects = [];
-  let cardDisplacement = 200;
+  let cardDisplacement = 400;
 
   projects.forEach((project, i) => {
     if (i == 0) {
@@ -69,8 +69,15 @@ export default function Home() {
 
 
         {/* Projects Below */}
-        {latestProjects}
-        {cardElements}
+        <div className="md:flex hidden flex-col items-center gap-[15px]">
+          {latestProjects}
+          {cardElements}
+        </div>
+
+        <div className="flex md:hidden flex-col items-center gap-[15px]">
+          {projects}
+        </div>
+        
         {/* <div className="h-[60px]"></div> */}
         <p className={`${Marine.className} text-textcolor mb-[10px] max-w-[600px] w-[80vw] min-w-[320px]`}>Older Projects can be found on my GitHub above...</p>
 

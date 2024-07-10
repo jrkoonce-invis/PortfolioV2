@@ -26,13 +26,7 @@ export default function Home() {
 
   const cardElements = [];
   const latestIdeas = [];
-  let cardDisplacement = 400
-
-  useEffect(() => {
-    if (window.innerWidth <= 640) {
-      cardDisplacement = 200;
-    }
-  })
+  let cardDisplacement = 400;
 
   ideas.forEach((idea, i) => {
     if (i == 0) {
@@ -73,8 +67,14 @@ export default function Home() {
         <p className={`${Marine.className} max-w-[600px] w-[80vw] min-w-[320px] text-6xl text-center mt-[20px]`}>Ideas</p>
 
         {/* Projects Below */}
-        {latestIdeas}
-        {cardElements}
+        <div className="md:flex hidden flex-col items-center gap-[15px]">
+          {latestIdeas}
+          {cardElements}
+        </div>
+
+        <div className="flex md:hidden flex-col items-center gap-[15px]">
+          {ideas}
+        </div>
         
 
     </div>
