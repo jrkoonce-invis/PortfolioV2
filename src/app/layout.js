@@ -1,6 +1,9 @@
 import localFont from 'next/font/local'
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const Marine = localFont({ src: '../../public/fonts/Marine.otf' });
 const WalsheimBold = localFont({ src: '../../public/fonts/WalsheimB.otf' });
 const WalsheimUltraBold = localFont({ src: '../../public/fonts/WalsheimUB.otf' });

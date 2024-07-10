@@ -3,7 +3,6 @@
 import React from "react";
 import Image from 'next/image'
 import localFont from 'next/font/local'
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { motion, useScroll } from "framer-motion"
 
