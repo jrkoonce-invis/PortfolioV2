@@ -6,16 +6,16 @@ import Image from 'next/image'
 
 import { motion, useScroll, useMotionValueEvent, useTransform, useSpring } from "framer-motion";
 
-import CLIMB1 from "../../../public/assets/CLIMB1.jpg"
-import CLIMB2 from "../../../public/assets/CLIMB2.jpg"
-import CLIMB3 from "../../../public/assets/CLIMB3.jpg"
-import HIKE1 from "../../../public/assets/HIKE1.jpg"
-import HIKE2 from "../../../public/assets/HIKE2.jpg"
-import HIKE3 from "../../../public/assets/HIKE3.jpg"
-import MOVIE2 from "../../../public/assets/MOVIE2.jpg"
-import MOVIE3 from "../../../public/assets/MOVIE3.jpg"
-import MOVIEHALF from "../../../public/assets/MOVIEHALF.jpg"
-import MOVIEOTHERHALF from "../../../public/assets/MOVIEOTHERHALF.jpg"
+import CLIMB1 from "../../../public/assets/CLIMB1.jpeg"
+import CLIMB2 from "../../../public/assets/CLIMB2.jpeg"
+import CLIMB3 from "../../../public/assets/CLIMB3.jpeg"
+import HIKE1 from "../../../public/assets/HIKE1.jpeg"
+import HIKE2 from "../../../public/assets/HIKE2.jpeg"
+import HIKE3 from "../../../public/assets/HIKE3.jpeg"
+import MOVIE2 from "../../../public/assets/MOVIE2.jpeg"
+import MOVIE3 from "../../../public/assets/MOVIE3.jpeg"
+import MOVIEHALF from "../../../public/assets/MOVIEHALF.jpeg"
+import MOVIEOTHERHALF from "../../../public/assets/MOVIEOTHERHALF.jpeg"
 
 
 const Marine = localFont({ src: '../../../public/fonts/Marine.otf' });
