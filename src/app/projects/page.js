@@ -12,7 +12,7 @@ const WalsheimBold = localFont({ src: '../../../public/fonts/WalsheimB.otf' });
 const WalsheimUltraBold = localFont({ src: '../../../public/fonts/WalsheimUB.otf' });
 
 const projects = [
-    <ProjectCard color="accent" link="/projects/design" title="Design Portfolio" desc="This is my UI/UX design specific portoflio! Here you can find many examples of my hands-on design expereience!" date="2024-09-15" />,
+    <ProjectCard color="accent" link="/projects/design" image="ladybug.svg" title="Design Portfolio" desc="This is my general design + UI/UX portoflio! Here you can find many examples of my hands-on design expereience!" date="2024-09-15" />,
     <ProjectCard color="secondary" link="/projects/portfolio" title="Personal Portfolio Site" desc="This very website is the second version of my personal website at jamesonkoonce.com. Want to know how it was made?" date="2024-06-8" />,
     <a target="_blank" href="https://drive.google.com/file/d/1LNOfeEU_nYDQruuATtZOc-V1pJawrnb9/view"><FakeProjectCard color="primary" link="" image="SPARKFUN.png" title="Sparkfun - Artemis Global Tracker Demo" desc="SparkFun sent me an Artemis Global Tracker device to build a project with. They posted the project on their Hackster which can be found here!" date="2024-06-1" /></a>,
     <ProjectCard color="accent" link="/projects/391project"image="LINUX.png" title="x86 Linux Kernel" desc="Built an x86 linux kernel in a group of 4 for ECE: 391 (Operating Systems). My group went on to win 2nd place in the end of year design competition in a course of 60+ teams!" date="2024-04-15" />,
