@@ -36,7 +36,7 @@ export default function Home() {
             <div>Project Github can be <a href="https://github.com/jrkoonce-invis/Pygame-Platformer" target="_blank" className="underline">found here</a></div>
 
             <ProjectHeading text="Overview" />
-            The final project for ECE: 391 (Operating Systems) at the Univeristy of Illinois was to build a Linux Kernel in a group. My group decided to go above an beyond to place 2nd in the design competition in a class of 60+ teams. This class led to many late nights and my first ever all nighter and this is my attempt to make me think it was worth it!
+            The final project for ECE: 391 (Operating Systems) at the Univeristy of Illinois was to build a Linux Kernel in a group. My group decided to go above and beyond to place 2nd in the design competition in a class of 60+ teams. This class led to many late nights and my first ever all-nighter and this is my attempt to make me think it was worth it!
 
             <ProjectHeading text="Some Technicals" />
             This was a huge project with a ton of instruction and documentation, but I'm going to focus on the filesystem of our kernel, as this was largely my responsibility. A filesystem is just a way that we interpret a mass of data. Data, on this low of a level is just all right next to eachother (nothing like files and folder just yet). Our kernel implemented a readable and writeable filesystem based on the following format:
@@ -49,14 +49,14 @@ export default function Home() {
             In this project, I also made a bunch of mini commands to help users interact with the filesystem! Above, we can see the "snano" command (simple nano) where to user can write to files at a specific location as shown! I also, implemented the "touch" command allowing users to add files into the filesystem.
 
 
-            <ProjectHeading text="Overall Kernel Features" />
+            {/* <ProjectHeading text="Overall Kernel Features" />
             <ul className="flex flex-col gap-[2px]">
             <li>- Graphics and custom animation system -{'>'} possible through the <a href="https://pixelfrog-assets.itch.io/pixel-adventure-1" target="_blank" className="underline">pixel adventure asset</a> pack</li>
             <li>- Camera movement to allow for sidescrolling gameplay</li>
             <li>- Tile-based level editor -{'>'} compatible with the <a href="https://www.mapeditor.org/" target="_blank" className="underline">Tiled level editor</a></li>
             <li>- Custom game state management system -{'>'} allows for menu, pause, lose states and more!</li>
             <li>- Game object system with 6+ game object types and 25+ possible object propterties</li>
-            </ul>
+            </ul> */}
         </div>
         
     </div>

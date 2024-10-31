@@ -34,7 +34,7 @@ export default function Home() {
         <div className={`${WalsheimThin.className} text-textcolor text-md max-w-[800px] w-[80vw] min-w-[320px]`}>
             <div>Project Github can be <a href="https://github.com/jrkoonce-invis/Grafiti-Map" className="underline" target="_blank">found here</a></div>
 
-            <ProjectHeading text="Project Goal" /> This platform will act as a little game where users can see and try to spot all of the graffiti around campus at the University of Illinois. Users will see a map of all the general locations of graffiti and be able to check them off inidividually. After a grifiti location is selected, a 3d model of the object the grafiti is on will be displayed (as a sort of hint). Users will also be able to sort by "type" and location of graffiti on the map.
+            <ProjectHeading text="Project Goal" /> This platform will act as a little game where users can see and try to spot all of the graffiti around campus at the University of Illinois. Users will see a map of all the general locations of graffiti and be able to check them off inidividually. After a grifiti location is selected, a 3d model of the object the graffiti is on will be displayed (as a sort of hint). Users will also be able to sort by "type" and location of graffiti on the map.
 
             <ProjectHeading text="Demo (Current Version)" />
             <Image src={GraffitiImage} alt="Image Unavailable" width={800}></Image>
@@ -43,7 +43,7 @@ export default function Home() {
             <ul className="flex flex-col gap-[2px]">
                 <li>- Frontend -{'>'} <a href="https://react.dev/" target="_blank" className="underline">ReactJS</a> is the main driver for the frontend. Many components are borrowed from <a href="https://mui.com/joy-ui/getting-started/" target="_blank" className="underline">MUI React Components</a> (JOY UI Core). The map element is an extension of <a href="https://leafletjs.com/" target="_blank" className="underline">LeafletJS</a> for React named <a href="https://react-leaflet.js.org/" target="_blank" className="underline">React Leaflet</a>.</li>
                 <li>- Backend -{'>'} <a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank" className="underline">Flask</a> is the main driver for the backend. It is a data meditaor between the database and the frontened.</li>
-                <li>- Database -{'>'} <a href="https://www.mongodb.com/" target="_blank" className="underline">MongoDB</a> is the database of choice. It houses the grafiti location, type, and model data.</li>
+                <li>- Database -{'>'} <a href="https://www.mongodb.com/" target="_blank" className="underline">MongoDB</a> is the database of choice. It houses the graffiti location, type, and model data.</li>
             </ul>
 
             <ProjectHeading text="Next Steps" />

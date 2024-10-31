@@ -12,9 +12,10 @@ const WalsheimBold = localFont({ src: '../../../public/fonts/WalsheimB.otf' });
 const WalsheimUltraBold = localFont({ src: '../../../public/fonts/WalsheimUB.otf' });
 
 const projects = [
+    <FakeProjectCard color="" link="" image="UIUC.png" title="Recent Course Projects" desc="- Bare-Bones TCP Transport Protocol implementation in C|- POS Classifier using HMM AI Algorithm|- Bare-Bones HTTP Client/Server in C|- Movie Review Classifier using Naive Bayes AI Algorithm" date="" />,
     <ProjectCard color="accent" link="/projects/design" image="ladybug.svg" title="Design Portfolio" desc="This is my general design + UI/UX portoflio! Here you can find many examples of my hands-on design expereience!" date="2024-09-15" />,
     <ProjectCard color="secondary" link="/projects/portfolio" title="Personal Portfolio Site" desc="This very website is the second version of my personal website at jamesonkoonce.com. Want to know how it was made?" date="2024-06-8" />,
-    <a target="_blank" href="https://drive.google.com/file/d/1LNOfeEU_nYDQruuATtZOc-V1pJawrnb9/view"><FakeProjectCard color="primary" link="" image="SPARKFUN.png" title="Sparkfun - Artemis Global Tracker Demo" desc="SparkFun sent me an Artemis Global Tracker device to build a project with. They posted the project on their Hackster which can be found here!" date="2024-06-1" /></a>,
+    <a target="_blank" href="https://learn.sparkfun.com/tutorials/geofence-treasure-hunt-with-artemis-global-tracker"><FakeProjectCard color="primary" link="" image="SPARKFUN.png" title="Sparkfun - Artemis Global Tracker Demo" desc="SparkFun sent me an Artemis Global Tracker device to build a project with. They posted the project on their website which can be found here!" date="2024-06-1" /></a>,
     <ProjectCard color="accent" link="/projects/391project"image="LINUX.png" title="x86 Linux Kernel" desc="Built an x86 linux kernel in a group of 4 for ECE: 391 (Operating Systems). My group went on to win 2nd place in the end of year design competition in a course of 60+ teams!" date="2024-04-15" />,
     <ProjectCard color="secondary" link="/projects/flyr" image="flyr_logo.png" title="Flyr Platform" desc="Founded a startup called Flyr which is creating a platform to allow students to see all of the flyers on campus at the University of Illinois in one place." date="2023-12-10" />,
     <ProjectCard color="primary" link="/projects/graffiti" title="Graffiti Map Web App" desc="Created a site that documents the work of a graffiti artist 'ZHERO' at the University of Illinois through an ineractive game for students on campus." date="2023-10-21" />,
@@ -66,7 +67,7 @@ export default function Home() {
         </div>
 
         <p className={`${Marine.className} text-textcolor  w-[600px] text-6xl text-center mt-[20px]`}>Projects</p>
-        <p className={`${WalsheimBold.className} text-textcolor max-w-[600px] w-[80vw] min-w-[320px]`}>Find all these projects and more at my <a href="https://github.com/jrkoonce-invis/" className="underline" target="_blank">Github here.</a> Select a project to learn more!</p>
+        <p className={`${WalsheimBold.className} text-textcolor max-w-[600px] w-[80vw] min-w-[320px]`}>Find all these projects and more at my <a href="https://github.com/jrkoonce-invis/" className="underline" target="_blank">Github here.</a> Select a colored project to learn more!</p>
 
 
         {/* Projects Below */}

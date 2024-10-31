@@ -72,7 +72,7 @@ export default function Home() {
                         <Image className="hover:scale-[1.05] duration-200" src={`/assets/design/info2.png`} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={600} />
                         <Image className="hover:scale-[1.05] duration-200" src={`/assets/design/info3.png`} alt="Image Unavailable" style={{objectFit: "contain"}} width={300} height={600} />
                     </div>
-                    <p className="w-[75%]">I also took part in a rebranding of Founders Illinois Entrepreneurs. Founders is an organization at UIUC taht builds resources for entrepreneurs on campus. This included new slide themes, team logos, and team brand identities!</p>
+                    <p className="w-[75%]">I also took part in a rebranding of Founders Illinois Entrepreneurs. Founders is an organization at UIUC that builds resources for entrepreneurs on campus. This included new slide themes, team logos, and team brand identities!</p>
                 </div>
 
                 {/* Eatsy */}
