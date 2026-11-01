@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1844],{5060:function(e,t,u){u.r(t),t.default={src:"/legacy/_next/static/media/ladybug.6468f4b2.svg",height:373,width:320,blurWidth:0,blurHeight:0}}}]);

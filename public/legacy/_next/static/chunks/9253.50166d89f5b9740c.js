@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9253],{9253:function(e,t,u){u.r(t),t.default={src:"/legacy/_next/static/media/uglyboy.24040920.svg",height:168,width:410,blurWidth:0,blurHeight:0}}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8065],{8065:function(e,t,c){c.r(t),t.default={src:"/legacy/_next/static/media/54use1.bdc07c40.JPG",height:1600,width:2400,blurWidth:0,blurHeight:0}}}]);
