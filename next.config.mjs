@@ -1,15 +1,14 @@
-import createMDX from '@next/mdx'
- 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configure `pageExtensions` to include markdown and MDX files
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  // Optionally, add any other Next.js config below
-}
- 
-const withMDX = createMDX({
-  // Add markdown plugins here, as desired
-})
- 
-// Merge MDX config with Next.js config
-export default withMDX(nextConfig)
+  async rewrites() {
+    // These only apply when a request doesn't already match a static file
+    // under public/ (e.g. public/legacy/_next/..., public/legacy/assets/...),
+    // since Next checks the filesystem before falling back to rewrites.
+    return [
+      { source: "/legacy", destination: "/legacy/index.html" },
+      { source: "/legacy/:path*", destination: "/legacy/:path*.html" },
+    ];
+  },
+};
+
+export default nextConfig;
