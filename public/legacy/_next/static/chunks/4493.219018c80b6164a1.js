@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4493],{4493:function(e,t,i){i.r(t),t.default={src:"/legacy/_next/static/media/ninjafrog.98a111a8.gif",height:619,width:627,blurWidth:0,blurHeight:0}}}]);
