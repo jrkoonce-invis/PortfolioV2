@@ -33,7 +33,7 @@ async function getLeetCodeSolvedCount(username) {
         }`,
         variables: { username },
       }),
-      next: { revalidate: 86400 },
+      cache: "no-store",
     });
     if (!res.ok) return null;
     const json = await res.json();
