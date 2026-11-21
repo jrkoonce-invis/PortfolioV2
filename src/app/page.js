@@ -45,9 +45,39 @@ async function getLeetCodeSolvedCount(username) {
   }
 }
 
-export default async function Home() {
-  const leetcodeSolved = await getLeetCodeSolvedCount(LEETCODE_USERNAME);
+// Internal URL of the homelab stats API. Only set when running in the cluster.
+const STATS_API_URL = process.env.STATS_API_URL;
 
+async function getHomelabStats() {
+  if (!STATS_API_URL) return null;
+  try {
+    const res = await fetch(STATS_API_URL, {
+      cache: "no-store",
+      signal: AbortSignal.timeout(2000), // don't let a slow API hold up the page
+    });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
+function formatUptime(isoTimestamp) {
+  if (!isoTimestamp) return null;
+  const totalMinutes = Math.floor((Date.now() - new Date(isoTimestamp).getTime()) / 60000);
+  const days = Math.floor(totalMinutes / 1440);
+  const hours = Math.floor((totalMinutes % 1440) / 60);
+  const minutes = totalMinutes % 60;
+  if (days > 0) return `${days}d ${hours}h`;
+  if (hours > 0) return `${hours}h ${minutes}m`;
+  return `${minutes}m`;
+}
+
+export default async function Home() {
+  const stats = await getHomelabStats();
+  const leetcodeSolved = stats?.leetcodeSolved ?? (await getLeetCodeSolvedCount(LEETCODE_USERNAME));
+  const cluster = stats?.cluster ?? null;
+  const siteUptime = formatUptime(cluster?.site?.runningSince);
   return (
     <main className="mx-auto flex max-w-[720px] flex-col gap-12 px-6 py-16 md:flex-row md:items-start md:gap-[50px] md:px-10 md:py-20">
       <div className="hidden shrink-0 flex-col gap-[10px] md:flex">
@@ -131,6 +161,26 @@ export default async function Home() {
             )}
           </div>
         </div>
+
+        {cluster && (
+          <div className="flex flex-col gap-4">
+            <p>This Site</p>
+            <div className="flex flex-col gap-1">
+              <p className="md:whitespace-nowrap">
+                -&gt; Self-hosted on a {cluster.nodes}-node Kubernetes cluster
+              </p>
+              <p className="md:whitespace-nowrap">
+                -&gt; {cluster.podsRunning} pods running across the homelab
+              </p>
+              {cluster.site && (
+                <p className="md:whitespace-nowrap">
+                  -&gt; {cluster.site.replicasReady}/{cluster.site.replicasDesired} replicas
+                  healthy{siteUptime && `, up for ${siteUptime}`}
+                </p>
+              )}
+            </div>
+          </div>
+        )}
 
         <div className="flex flex-col gap-4">
           <p>Contact</p>
