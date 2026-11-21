@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   async rewrites() {
     // These only apply when a request doesn't already match a static file
     // under public/ (e.g. public/legacy/_next/..., public/legacy/assets/...),
